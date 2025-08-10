@@ -24,9 +24,3 @@
     - Then use ```readStream.on('data', (chunk) => {})```
 - Similarly, to write large chunks of data to a file ```const writeStream = fs.createWriteStream('[filename]')```
     - Then use ```writeStream.write(chunk)```
-
-## Servers and Clients 
-- A client sends a request to the server and the server responds.
-- To create a server (without express.js) export the ```const http = require('http');```
-    - Create server with ```const server = http.createServer((req, res) => {})
-    - Make sure the server listens for requests with ```server.listen([PortNumber], '[localhost or frontend url]')```
