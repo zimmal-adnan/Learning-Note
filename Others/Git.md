@@ -72,6 +72,10 @@
 - Use ```git reset --hard [CommitHash]```
 - Then ```git push origin [branchname] --force```
  
+## Deleting a Commit on Git
+- Use ```git reset --soft HEAD~1``` to delete a commit and keep changes in the file.
+- Use ```git reset --hard HEAD~1``` to delete a commit and remove changes in the file.
+
 ## Branches
 - To create a new branch in git, use ```git branch [branchname]```
 - To switch branches, use either ```git checkout [branchname]``` or ```git switch [branchname]```
