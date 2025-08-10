@@ -18,3 +18,9 @@
 - To remove a directory/folder: ```fs.rmdir('[dirname]' )
 - To check if a file exists: ```fs.existsSync('[filename or dirname]')``` 
 - To delete a file: ```fs.unlink('[filename]', (err) => {})```
+
+## Buffers and Streams
+- Sometimes if you need to read from a large file use ```const readStream = fs.createReadStream('[filename]')```
+    - Then use ```readStream.on('data', (chunk) => {})```
+- Similarly, to write large chunks of data to a file ```const writeStream = fs.createWriteStream('[filename]')```
+    - Then use ```writeStream.write(chunk)```
