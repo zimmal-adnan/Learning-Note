@@ -50,4 +50,5 @@
     - Authentication check middleware for protected routes.
     - Middleware to parse JSON data from requests.
     - Return 404 pages.
-
+- Use ```app.use(morgan('dev'))``` to get more information about the request, path, status code and ping time.
+- To make images/files public to the browser, use ```app.use(express.static([foldername/filename]))```
