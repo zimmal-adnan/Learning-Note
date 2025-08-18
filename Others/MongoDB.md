@@ -29,3 +29,9 @@
     - You create a model based on that schema with ```const [modelName] = mongoose.model("modelName", [schemaName]);```
         - The model can help the program communicate with the database
 - Make sure to use ```mongoose.connect(dbURI)``` on the server code
+
+## Mongoose Methods
+- If you are saving a model instance from the code use ```[instanceName].save()``` at the end to save it to the database.
+- To see all the documents in a collection, use ```[modelName].find()```
+- To find a specific document by ID use ```[modelName].findbyId()```
+
