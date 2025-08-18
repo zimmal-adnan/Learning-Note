@@ -81,10 +81,19 @@
 
 - If you want to undo the previous commit, simply do `git restore --source=[HEAD~1] [filename]`
 
+## Finding a Bad Commit
+
+- If your code was running perfectly some commits ago you can find out where the bug was using `git bisect start`
+- If your current program is not working mark it as `git bisect bad`
+- Find the commit where the program worked and mark it as good with `git bisect good [CommitHash]`
+- Do `git bisect reset` after you have found the bug.
+  - Your HEAD will be where it was before bisecting.
+
 ## Deleting Commits from GitHub
 
-- Use `git reset --hard [CommitHash]`
+- Use `git reset --hard [CommitHash]` (discards local changes)
 - Then `git push origin [branchname] --force`
+- Use `git reset --soft [CommitHash]` to remove the last commit but keep changes staged
 
 ## Branches
 
@@ -105,6 +114,11 @@
   - You can apply a specific stash with `git stash apply stash@{number}`
   - Drop stashes with `git stash drop stash@{number}`
 - Clear stash with `git stash clear`
+
+## Git Squash
+
+- If you want to squash multiple unwanted/tedious commits to make your commit history look cleaner use `git rebase -i HEAD~[number]`
+- Squash all the commits (except for the commit you want all the commits to be squashed into).
 
 ## Merging Branches
 
